@@ -108,7 +108,7 @@ if len(df):
         button_map = st.button('Show map')
 
         toggle_urls = st.toggle(
-            'Consider offers URLs (may take longer)')
+            'Show offers URLs (may take longer)')
 
         if button_map:
             fig_map = plot_map(df, urls=toggle_urls)
