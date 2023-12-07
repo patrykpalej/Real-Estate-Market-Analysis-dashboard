@@ -30,19 +30,18 @@ def read_from_db(sql, conn_str):
     return df
 
 
-pd.options.mode.chained_assignment = None
+def fetch_and_preprocess(property_type):
 
-preprocess_funcs_dict = {"lands": preprocess_lots, "houses": preprocess_houses,
+    pd.options.mode.chained_assignment = None
+
+    preprocess_funcs_dict = {"lands": preprocess_lots, "houses": preprocess_houses,
                          "apartments": preprocess_apartments}
 
-sql_queries_dict = {"lands": "SELECT * FROM otodom_lands",
+    sql_queries_dict = {"lands": "SELECT * FROM otodom_lands",
                     "houses": "SELECT * FROM otodom_houses",
                     "apartments": "SELECT * FROM otodom_apartments"}
 
-connection_string = generate_psql_connection_string(*get_credentials())
-
-
-def fetch_and_preprocess(property_type):
+    connection_string = generate_psql_connection_string(*get_credentials())
     preprocess_func = preprocess_funcs_dict[property_type]
     sql_query = sql_queries_dict[property_type]
 
