@@ -8,13 +8,13 @@ from functions.main_page import main_page
 st.set_page_config(layout="wide", page_title="Real Estate Market Analysis")
 
 
-show_pages(
-    [
-        Page("streamlit_app.py", "Project description", "💻"),
-        Page("pages/page_houses.py", "Houses", "🏡"),
-        Page("pages/page_lands.py", "Lands", "🌳"),
-        Page("pages/page_apartments.py", "Apartments", "🏢")
-    ])
+# show_pages(
+#     [
+#         Page("streamlit_app.py", "Project description", "💻"),
+#         Page("pages/page_houses.py", "Houses", "🏡"),
+#         Page("pages/page_lands.py", "Lands", "🌳"),
+#         Page("pages/page_apartments.py", "Apartments", "🏢")
+#     ])
 
 
 if __name__ == "__main__":
