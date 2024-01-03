@@ -118,6 +118,7 @@ if len(df):
         st.plotly_chart(fig_by_month)
         st.markdown("***")
 
+
     with st.spinner(f'Processing {len(df)} offers'):
         fig_by_province = plot_by_province(df)
         st.plotly_chart(fig_by_province)

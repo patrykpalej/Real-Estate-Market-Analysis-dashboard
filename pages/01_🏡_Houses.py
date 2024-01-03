@@ -135,5 +135,6 @@ if len(df):
 
             st.components.v1.html(fig_map._repr_html_(), width=1100,
                                   height=1200)
+
 else:
     st.markdown("There are no offers that match your criteria")

@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 color_1 = 'rgba(100, 149, 237, 0.6)'
 color_2 = 'rgba(144, 238, 144, 0.6)'
 color_3 = 'rgba(235, 202, 213, 0.6)'
+color_4 = 'rgba(148, 137, 235, 0.6)'
 
 titles = ["Land area [m2]", "Price [PLN]", "Price per m2 [PLN/m2]"]
 
@@ -85,11 +86,11 @@ def plot_by_month(df):
     fig = sp.make_subplots(rows=1, cols=3, subplot_titles=titles)
 
     line_chart1 = go.Scatter(x=unique_months, y=n_offers, mode='lines',
-                             line=dict(color=color_1))
+                             line=dict(color=color_1, width=5))
     line_chart2 = go.Scatter(x=unique_months, y=price_data, mode='lines',
-                             line=dict(color=color_2))
+                             line=dict(color=color_2, width=5))
     line_chart3 = go.Scatter(x=unique_months, y=price_per_m2_data, mode='lines',
-                             line=dict(color=color_3))
+                             line=dict(color=color_4, width=5))
 
     fig.add_trace(line_chart1, row=1, col=1)
     fig.add_trace(line_chart2, row=1, col=2)

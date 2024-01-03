@@ -92,7 +92,7 @@ if len(df):
     with st.spinner(f'Processing {len(df)} offers'):
         fig_all = plot_all(df)
         st.plotly_chart(fig_all)
-        st.markdown("***")
+        st.markdown("***")        
 
     with st.spinner(f'Processing {len(df)} offers'):
         fig_by_month = plot_by_month(df)
