@@ -5,7 +5,8 @@ from functions.data_loading import load_data_concurrently
 from functions.main_page import main_page
 
 
-st.set_page_config(layout="wide", page_title="Real Estate Market Analysis")
+st.set_page_config(layout="wide", page_title="Real Estate Market Analysis",
+                   page_icon="🏘️")
 
 
 if __name__ == "__main__":
