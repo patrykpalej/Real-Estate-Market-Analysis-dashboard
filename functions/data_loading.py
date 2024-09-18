@@ -35,11 +35,22 @@ def fetch_and_preprocess(property_type):
     pd.options.mode.chained_assignment = None
 
     preprocess_funcs_dict = {"lands": preprocess_lots, "houses": preprocess_houses,
-                         "apartments": preprocess_apartments}
+                             "apartments": preprocess_apartments}
 
-    sql_queries_dict = {"lands": "SELECT * FROM otodom_lands",
-                    "houses": "SELECT * FROM otodom_houses",
-                    "apartments": "SELECT * FROM otodom_apartments"}
+    sql_queries_dict = {"lands": """SELECT url, title, price, advertiser_type, advert_type,
+                                    utc_created_at, province, location, latitude, longitude,
+                                    land_area
+                                    FROM otodom_lands""",
+
+                    "houses": """SELECT url, title, price, advertiser_type, advert_type,
+                                    utc_created_at, province, location, latitude, longitude,
+                                    market, lot_area, house_area, build_year
+                                    FROM otodom_houses""",
+
+                    "apartments": """SELECT url, title, price, advertiser_type, advert_type,
+                                    utc_created_at, province, location, market, latitude, longitude,
+                                    build_year, apartment_area, status
+                                    FROM otodom_apartments"""}
 
     connection_string = generate_psql_connection_string(*get_credentials())
     preprocess_func = preprocess_funcs_dict[property_type]
