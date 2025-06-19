@@ -31,6 +31,7 @@ rich==13.9.4
 rpds-py==0.23.1
 six==1.17.0
 smmap==5.0.2
+st-pages==1.0.1
 streamlit==1.46.0
 tenacity==9.0.0
 toml==0.10.2

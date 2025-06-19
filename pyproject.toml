@@ -1,0 +1,15 @@
+[project]
+name = "realestateanalysis-dashboard"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "folium>=0.20.0",
+    "pandas>=2.3.0",
+    "plotly>=6.1.2",
+    "psycopg2-binary>=2.9.10",
+    "python-dotenv>=1.1.0",
+    "sqlalchemy>=2.0.41",
+    "streamlit>=1.46.0",
+]

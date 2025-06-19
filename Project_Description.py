@@ -1,5 +1,5 @@
 import streamlit as st
-from st_pages import Page, show_pages
+# from st_pages import Page, show_pages
 
 from functions.data_loading import load_data_concurrently
 from functions.main_page import main_page
